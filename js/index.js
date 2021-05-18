@@ -7,7 +7,7 @@ $(function(){
             $(".index_tabs .inner").eq(index).fadeIn().siblings("div").stop().hide();
             console.log(index)
             if(index==1){
-               window.location.href='index1.html'
+               window.location.href='analysis.html'
             }
         })
     });

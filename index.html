@@ -8,7 +8,6 @@
     <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
     <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css"/>
     <script src="js/laydate.js"></script>
     <script src="js/Home_page.js"></script>
     <meta charset="UTF-8">
@@ -162,49 +161,6 @@
                             <div class="display_type_funct_box">
                                 <span class="display_type_funct display_type_funct_sure">确定</span>
                             </div>
-                        </div>
-                        <!--城市选择-->
-                        <div class="city_chose_box display_box" style="display: none">
-                            <div class="display_type_center_box">
-                                <ul class="display_type_inner_box" id="ulCity">
-                                    <li class="display_type_msg"> 北京市</li>
-                                    <li class="display_type_msg">自贡市</li>
-                                    <li class="display_type_msg">攀枝花市</li>
-                                    <li class="display_type_msg">泸州市</li>
-                                    <li class="display_type_msg">德阳市</li>
-                                    <li class="display_type_msg">绵阳市</li>
-                                    <li class="display_type_msg">广元市</li>
-                                    <li class="display_type_msg">遂宁市</li>
-                                    <li class="display_type_msg">内江市</li>
-                                    <li class="display_type_msg">乐山市</li>
-                                    <li class="display_type_msg">南充市</li>
-                                    <li class="display_type_msg">宜宾市</li>
-                                    <li class="display_type_msg">广安市</li>
-                                    <li class="display_type_msg">达州市</li>
-                                    <li class="display_type_msg">巴中市</li>
-                                    <li class="display_type_msg">雅安市</li>
-                                    <li class="display_type_msg">眉山市</li>
-                                    <li class="display_type_msg">资阳市</li>
-                                    <li class="display_type_msg">阿坝州</li>
-                                    <li class="display_type_msg">甘孜州</li>
-                                    <li class="display_type_msg">凉山州</li>
-                                </ul>
-                            </div>
-                            <div class="display_type_funct_box">
-                                <span class="display_type_funct display_type_funct_sure">确定</span>
-                            </div>
-                        </div>
-                        <!--轨迹回放-->
-                        <div class="trajectory_box" style="display: none" id="divRouteReview">
-                            <input class="trajectory" id="start" placeholder="开始时间">
-                            <input class="trajectory" id="end"  placeholder="结束时间">
-                            <select class="ratio">
-                                <option>1倍</option>
-                                <option>2倍</option>
-                                <option>3倍</option>
-                            </select>
-                            <button class="playback" onclick="showRoute()">回放</button>
-                            <button class="playback close_playback">关闭</button>
                         </div>
                         <!--缓冲区设置-->
                         <div class="trajectory_box" style="display: none" id="divBufferSetting">
@@ -951,7 +907,7 @@
 <script>
     function LoadBaiduMapScript() {
     //console.log("初始化百度地图脚本...");
-    const AK = 5ieMMexWmzB9jivTq6oCRX9j;//https://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback
+    const AK = '5ieMMexWmzB9jivTq6oCRX9j';//https://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback
     const BMap_URL = "https://api.map.baidu.com/api?v=2.0&ak="+ AK +"&s=1&callback=onBMapCallback";
     return new Promise((resolve, reject) => {
         // 如果已加载直接返回

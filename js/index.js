@@ -3,9 +3,9 @@ $(function(){
     // index();
     $(".index_nav ul li").each(function(index){
         $(this).click(function(){
-            $(this).addClass("nav_active").siblings().removeClass("nav_active");
-            $(".index_tabs .inner").eq(index).fadeIn().siblings("div").stop().hide();
-            console.log(index)
+            // $(this).addClass("nav_active").siblings().removeClass("nav_active");
+            // $(".index_tabs .inner").eq(index).fadeIn().siblings("div").stop().hide();
+            // console.log(index)
             if(index==1){
                window.location.href='analysis.html'
             }

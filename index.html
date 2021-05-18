@@ -1,0 +1,1064 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css"/>
+    <script src="js/laydate.js"></script>
+    <script src="js/Home_page.js"></script>
+    <meta charset="UTF-8">
+    <title>数据可视化技术结合船舶平台的初步探究</title>
+</head>
+<body >
+<div class="data_bodey">
+    <div class="index_nav" >
+        <ul style="height: 30px; margin-bottom: 0px;">
+            <li class="l_left total_chose_fr nav_active">实时监测</li>
+          
+            <li class="r_right total_chose_pl">数据分析</li>
+        </ul>
+        <div class="total_chose_box" style="display: none;">
+            <div style="height: 32px;"></div>
+            <span class="chose_tltle">请选择年份：</span>
+            <select class="year_chose">
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+            </select>
+            <span class="chose_tltle">请输入月份：</span>
+            <input class="chose_text_in">
+            <span class="chose_tltle">请选择区域：</span>
+            <select class="year_chose">
+                <option>区域一</option>
+                <option>区域二</option>
+                <option>区域三</option>
+                <option>区域四</option>
+                <option>区域五</option>
+                <option>区域六</option>
+            </select>
+            <button class="chose_enter">确定</button>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="index_tabs" >
+        <!--安防运作-->
+        <div class="inner" style="height: 109%;">
+
+            <div class="left_cage">
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 9% !important; height: 24%;">
+                    <div class="speed" id="speed" style="height: 90%;width: 100%"></div>
+                </div>
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 38%;">
+                    <div class="dataAllBorder02 video_cage">
+                        <img class="video_around video_around_chose" src="video/video.jpg">
+                        <img class="video_around" src="video/video2.jpg">
+                        <img class="video_around" src="video/video3.jpg">
+                        <img class="video_around" src="video/video4.jpg">
+                    </div>
+                </div>
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 32%; position: relative;">
+                    <div class="dataAllBorder02" style="padding: 1.2%; overflow: hidden">
+
+                        <div class="message_scroll_box">
+                            <div class="message_scroll">
+                            <div class="scroll_top">
+                                <span class="scroll_title">气象预警</span>
+                                <span class="scroll_level scroll_level01">一级</span>
+                                <a class="localize"></a>
+                                <span class="scroll_timer">21-04-13/9:52</span>
+                            </div>
+                            <div class="msg_cage">
+                                <a class="localize_title">查看预警信息</a>
+                            </div>
+                            <div class="msg_cage">
+                                <a class="localize_msg">预警信息展示</a>
+                            </div>
+                        </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">暴雨预警</span>
+                                    <span class="scroll_level scroll_level03">三级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">21-04-13/19:52</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title">查看预警信息</a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">预警信息展示</a>
+                                </div>
+                            </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">船舱温度预警</span>
+                                    <span class="scroll_level scroll_level02">二级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">21-04-13/8:52</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title">查看预警信息</a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">预警信息展示</a>
+                                </div>
+                            </div>
+                            <div class="message_scroll">
+                                <div class="scroll_top">
+                                    <span class="scroll_title">台风警示</span>
+                                    <span class="scroll_level scroll_level01">一级</span>
+                                    <a class="localize"></a>
+                                    <span class="scroll_timer">21-04-12/11:22</span>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_title">查看预警信息</a>
+                                </div>
+                                <div class="msg_cage">
+                                    <a class="localize_msg">预警信息展示</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="scroll_tool_outbox">
+                        <div class="scroll_tool_box">
+                            <a class="scroll_tool" href="#">查看历史信息</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center_cage">
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 3.5% !important; height: 62.7%; position: relative;">
+                    <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                        <!--标题栏-->
+                        <div class="map_title_box" style="height: 6%">
+                            <div class="map_title_innerbox">
+                                <div class="map_title">实时地图</div>
+                            </div>
+                        </div>
+                        <div class="map" id="map"  ></div>
+                        <!--地图显示信息选择-->
+                        <div class="display_type_box display_box" style="display: none;overflow:auto">
+                            <div class="display_type_center_box">
+                                <ul class="display_type_inner_box" id="layerList">
+                                    <li class="display_type_msg"><input id="zt_4" type="checkbox" class="display_type_chose"/> 港口</li>
+                                    <li class="display_type_msg"><input  id="zt_1" type="checkbox" class="display_type_chose"/>捕鱼区</li>
+                                    <li class="display_type_msg"><input  id="zt_5" type="checkbox" class="display_type_chose"/>受限海域</li>
+                                    <li class="display_type_msg"><input  id="zt_6" type="checkbox" class="display_type_chose"/>危险海域</li>
+                                    <li class="display_type_msg"><input  id="zt_2" type="checkbox" class="display_type_chose"/>海流层</li>
+                                    <li class="display_type_msg">----------------------------------</li>
+                                    <li class="display_type_msg"><input id="zt_14" type="checkbox" class="display_type_chose" />危化品运输船舶</li>
+                                    <li class="display_type_msg"><input id="zt_11" type="checkbox" class="display_type_chose" />监控设备</li>
+                                </ul>
+                            </div>
+                            <div class="display_type_funct_box">
+                                <span class="display_type_funct display_type_funct_sure">确定</span>
+                            </div>
+                        </div>
+                        <!--城市选择-->
+                        <div class="city_chose_box display_box" style="display: none">
+                            <div class="display_type_center_box">
+                                <ul class="display_type_inner_box" id="ulCity">
+                                    <li class="display_type_msg"> 北京市</li>
+                                    <li class="display_type_msg">自贡市</li>
+                                    <li class="display_type_msg">攀枝花市</li>
+                                    <li class="display_type_msg">泸州市</li>
+                                    <li class="display_type_msg">德阳市</li>
+                                    <li class="display_type_msg">绵阳市</li>
+                                    <li class="display_type_msg">广元市</li>
+                                    <li class="display_type_msg">遂宁市</li>
+                                    <li class="display_type_msg">内江市</li>
+                                    <li class="display_type_msg">乐山市</li>
+                                    <li class="display_type_msg">南充市</li>
+                                    <li class="display_type_msg">宜宾市</li>
+                                    <li class="display_type_msg">广安市</li>
+                                    <li class="display_type_msg">达州市</li>
+                                    <li class="display_type_msg">巴中市</li>
+                                    <li class="display_type_msg">雅安市</li>
+                                    <li class="display_type_msg">眉山市</li>
+                                    <li class="display_type_msg">资阳市</li>
+                                    <li class="display_type_msg">阿坝州</li>
+                                    <li class="display_type_msg">甘孜州</li>
+                                    <li class="display_type_msg">凉山州</li>
+                                </ul>
+                            </div>
+                            <div class="display_type_funct_box">
+                                <span class="display_type_funct display_type_funct_sure">确定</span>
+                            </div>
+                        </div>
+                        <!--轨迹回放-->
+                        <div class="trajectory_box" style="display: none" id="divRouteReview">
+                            <input class="trajectory" id="start" placeholder="开始时间">
+                            <input class="trajectory" id="end"  placeholder="结束时间">
+                            <select class="ratio">
+                                <option>1倍</option>
+                                <option>2倍</option>
+                                <option>3倍</option>
+                            </select>
+                            <button class="playback" onclick="showRoute()">回放</button>
+                            <button class="playback close_playback">关闭</button>
+                        </div>
+                        <!--缓冲区设置-->
+                        <div class="trajectory_box" style="display: none" id="divBufferSetting">
+                            <button class="playback" style="width:60px" onclick="setBufferCenter()">设置点</button>
+                            <input class="trajectory" id="txtBufferX" placeholder="坐标X">
+                            <input class="trajectory" id="txtBufferY" placeholder="坐标Y">
+                            <input value="10" class="trajectory" id="txtBufferDis" placeholder="缓冲距离">
+                            <select class="ratio">
+                                <option>米</option>
+                                <option>千米</option>
+                            </select>
+                            <button class="playback"  onclick="executeBuffer();edit()" style="width:60px">分析</button>
+                            <button class="playback close_playback">关闭</button>
+                        </div>
+
+                        <!--地图工具栏-->
+                        <div class="map_tool_outbox">
+                            <span class="map_tool">
+                                    <a class="map_tool_inner display_type_btn" title="专题地图" style="background-position-x:-180px"></a>
+                                </span>
+                            <!-- <span class="map_tool">
+                                    <a class="map_tool_inner city_chose_btn" title="船舶定位" style="background-position-x:-432px"></a>
+                                </span> -->
+                            <span class="map_tool" id="btnBuffer">
+                                    <a class="map_tool_inner" title="缓冲区分析" style="background-position-x:-216px"></a>
+                                </span>
+                            <span class="map_tool">
+                                    <a class="map_tool_inner" onclick="cancel()" id="fresh_tool" title="清空" style="background-position-x:-396px"></a>
+                                </span>
+                            <span class="map_tool">
+                               <input type="text" id="txtCoord" style="width:150px;visibility:hidden" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 32.1%;">
+                    <div class="dataAllBorder02" id="map_title_innerbox">
+                        <div class="map_title_box">
+                            <div class="map_title_innerbox">
+                                <div class="map_title" style="background-image: url(img/second_title.png);">维修保养计划</div>
+                            </div>
+                            <div >
+                                <select id="selLayer" style="width:100px;">
+                                    <option value="">轮机部</option>
+                                    <option value="">甲板部</option>
+                                </select>
+                            </div>
+                        </div>
+                        <table id="table" style="width: 100%"></table>
+                    </div>
+
+                    <div class="dataAllBorder02" id="map_title_innerbox1" style="display: none; position: relative;">
+                        <div class="map_title_box">
+                            <div class="map_title_innerbox">
+                                <div class="map_title" style="background-image: url(img/second_title.png);">预警条件扫描</div>
+                            </div>
+                        </div>
+                        <ul class="tab_msg_box">
+                           <li class="tab_msg tab_msg01 tab_msg_current">xxxxx</li>
+                            <li class="tab_msg tab_msg02">xxx</li>
+                        </ul>
+                       
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right_cage">
+                <!--顶部切换位置-->
+                <div class="dataAllBorder01 cage_cl" style="margin-top: 9% !important; height: 24%">
+                    <div class="dataAllBorder02" id="cage_cl" >
+                        <div class="analysis">船舶信息展示</div>
+                        <ul class="location_msg_box">
+                            <li class="location_msg01 location_single">时间：<a href="#" style="color: #cdd6db;">2021-04-14 12：00</a></li>
+                            <li class="location_msg02 location_single">预抵港时间：2021-04-24 12：00</li>
+                            <li class="location_msg02 location_single">维度：13°30′N</li>
+                            <li class="location_msg01 location_single">经度：141°30′E</li>
+                            <li class="location_msg01 location_single">航行时间：<a href="#" style="color: #cdd6db;">12d3h</a></li>
+                            <li class="location_msg02 location_single">航线：广东-新加坡</li>
+                            <li class="location_msg02 location_single">耗油合计（顿）：33.20</li>
+                            <li class="location_msg01 location_single">耗油率：1720.17</li>
+                        </ul>
+                    </div>
+                    <div class="dataAllBorder02 over_hide" id="cage_cl1" style="display: none" >
+                        <div class="analysis">气象预警：</div>
+                        <ul class="location_msg_box">
+                            <li class="location_msg01 location_single">事件级别：<a href="#" style="color: #dc0000;">一级</a></li>
+                            <li class="location_msg02 location_single">事件类型：极端天气预警</a></li>
+                            <li class="location_msg02 location_single">预警发布时间：<a href="#" style="color: #cdd6db;">2021-04-13 09:52</a></li>
+                            <li class="location_msg01 location_single">预警地址：13°30′N 140°30′E</a></li>
+                            <li class="location_msg01 location_single" style="width: 100%">预警关联：台风警示2021-04-12 11:22</a></li>
+                            <li class="location_msg01 location_single" style="width: 100%">预警提醒：未来三天会有强台风影响，请避让并做好防护措施。</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl check_increase" style=" margin-top: 1.5% !important;">
+                    <!--切换01-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 18%">名称</th>
+                                <th>级别</th>
+                                <th>备注</th>
+                                <th>范围</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>台风1号</td>
+                                <td>三级</td>
+                                <td>-</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>台风2号</td>
+                                <td>三级</td>
+                                <td>-</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>台风3号</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>400m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>1km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>500m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>500m-10km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>xxxxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>xxxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>400m-2km</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    <!--切换02-->
+                    <div class="dataAllBorder02 over_hide dataAllBorder20" id="over_hide1"  style="display: none">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th style="width: 18%">名称</th>
+                                <th>级别</th>
+                                <th>备注</th>
+                                <th>范围</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>台风1号</td>
+                                <td>三级</td>
+                                <td>-</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>台风2号</td>
+                                <td>三级</td>
+                                <td>-</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>台风3号</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>400m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>1km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>500m-2km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>500m-10km</td>
+                            </tr>
+                            <tr>
+                                <td>xxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>200m-5km</td>
+                            </tr>
+                            <tr>
+                                <td>xxxxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>4km-80km</td>
+                            </tr>
+                            <tr>
+                                <td>xxxx</td>
+                                <td>一级</td>
+                                <td>-</td>
+                                <td>400m-2km</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important; height: 32%; position: relative;">
+                    <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                        <div class="analysis">船上人员结构占比：</div>
+                        <div class="danger_contain_box">
+                            <div id="container_huan" style="height: 90%;width: 100%"></div>
+                        </div>
+                        <div class="danger_depart_box">
+
+                            <ul class="danger_depart">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">总人数</li>
+                                <li class="data data01">20</li>
+                                <li class="data data02">&nbsp&nbsp100%</li>
+                            </ul>
+                            <ul class="danger_depart">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_02.png); background-position-x: 0px"></li>
+                                <li class="data_name">甲板部</li>
+                                <li class="data data01">9</li>
+                                <li class="data data02" style="color: #ff2865;">&nbsp&nbsp45%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_03.png); background-position-x: 0px"></li>
+                                <li class="data_name">轮机部</li>
+                                <li class="data data01">6</li>
+                                <li class="data data02">&nbsp&nbsp30%</li>
+                            </ul>
+                            <ul class="danger_depart danger_depart01">
+                                <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px"></li>
+                                <li class="data_name">后勤部及补充</li>
+                                <li class="data data01">4</li>
+                                <li class="data data02">&nbsp&nbsp20%</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="inner" style="display: none;">
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <div class="data_chart" id="buyTime"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx类型分析</div>
+                            <p class="data_chart" id="Package01"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="rode01"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxx分析</div>
+                            <p class="data_chart" id="bookAret"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxxx分析</div>
+                            <p class="data_chart" id="bookBmonth"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxxx分析</div>
+                            <p class="data_chart" id="whearAbook"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="data_left02">
+                <div class="dataAll01">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit2">数据汇总</div>
+
+                            <table class="table_data01" >
+                                <tr><td>总数</td><td colspan="3" class="font01">56320</td></tr>
+                                <tr><td>xxxxxx数</td><td colspan="3" class="font02">56320</td></tr>
+                                <tr>
+                                    <td>xxxxx数：</td>
+                                    <td>10个</td>
+                                    <td>类型数：</td>
+                                    <td>6个</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxx最多数：</td>
+                                    <td>16-20点</td>
+                                    <td>xxxxx最多月：</td>
+                                    <td>12月</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx最多季节：</td>
+                                    <td>xxxx</td>
+                                    <td>xxxxx天气：</td>
+                                    <td>晴天</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx：</td>
+                                    <td>套餐A</td>
+                                    <td>xxxxxx：</td>
+                                    <td>活动</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxxx：</td>
+                                    <td>交通畅通</td>
+                                    <td>xxxxx特殊时间：</td>
+                                    <td>国庆节</td>
+                                </tr>
+                                <tr>
+                                    <td>xxxxx：</td>
+                                    <td colspan="3" style="color: red">xxxxxB</td>
+
+                                </tr>
+                                <tr>
+                                    <td>xxxxx多季节：</td>
+                                    <td colspan="3" style="color: red">冬季</td>
+
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll02">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="rodeAbook"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="data_left01">
+                <div class="dataAll maginS">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx分析</div>
+                            <p class="data_chart" id="seaAbook01"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxx订单分析</div>
+                            <p class="data_chart" id="actionBook"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dataAll">
+                    <div class="dataAllBorder01">
+                        <div class="dataAllBorder02">
+                            <div class="data_tit1">xxxxxx分析</div>
+                            <p class="data_chart" id="sperceBook01"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/echarts-all.js"></script>
+<script src="js/index.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+<script src="js/Home_page.js"></script>
+<script src="js/artDialog/artDialog.js"></script>
+<script src="js/artDialog/plugins/iframeTools.source.js"></script>
+<script>
+    var number;
+    $(function() {
+        if (window.screen.height <= 768) {
+            number = 4;
+        } else if (window.screen.height > 768 && window.screen.height <= 900) {
+            number = 6
+        } else if (window.screen.height > 1080) {
+            number = 8
+        }
+    });
+
+
+//    翻页模块
+    $(".tcdPageCode").createPage({
+        pageCount:5,
+        current:1,
+        backFn:function(p){}
+    });
+    $(".chemistry_tcdPageCode").createPage({
+    pageCount:4,
+    current:1,
+    backFn:function(p){}
+});
+    $(".enterprise_tcdPageCode").createPage({
+    pageCount:4,
+    current:1,
+    backFn:function(p){}
+});
+    $(".car_tcdPageCode").createPage({
+    pageCount:4,
+    current:1,
+    backFn:function(p){}
+});
+
+    $(function () {
+        $(".tit02Diva a").each(function (index) {
+            $(this).on("click",function () {
+                $(".data_map").eq(index).fadeIn().siblings(".data_map").stop().hide();
+                $(this).prev('i').removeClass('i_crlieAction');
+                $(this).siblings('a').prev('i').addClass('i_crlieAction');
+
+            })
+        });
+        BootstrapTable();
+        Echarts();
+        Echarts1();
+        $("#fresh_tool").click(function(event){
+            event.stopPropagation();
+            cancel();
+        })
+
+    });
+    function EventClick(){
+        $(".check_increase").removeClass("check_increase_act");
+        $("#over_hide1").show().siblings().hide();
+        $(".check_decrease").show();
+        $("#cage_cl").hide();
+        $("#map_title_innerbox").hide();
+        $("#cage_cl1").show();
+//        $("#over_hide").show();
+        $("#map_title_innerbox1").show();
+        $(".addition_check_in").hide();
+        $("#car_check_in").hide();
+        BootstrapTable();
+    }
+    function cancel(e){
+        $(".check_increase").removeClass("check_increase_act");
+        $("#over_hide").show().siblings().hide();
+        $(".check_decrease").show();
+        $("#cage_cl").show();
+        $("#cage_cl1").hide();
+//        $("#cage_cl").show();
+//        $("#over_hide1").show();
+//        $("#map_title_innerbox").show();
+        BootstrapTable();
+    }
+
+    function BootstrapTable() {
+        $('#table').bootstrapTable({
+            method: "get",
+            striped: true,
+            singleSelect: false,
+            data: [
+    {
+      "id": "1",
+      "shebei": "No.2发电机 缸套",
+      "gongdan": "xxx",
+      "start": "2021-04-10",
+      "end": "2021-05-10",
+      "status": "已安排，待执行"
+    },
+    {
+      "id": "2",
+      "shebei": "No.2发电机 主轴承",
+      "gongdan": "xxx",
+      "start": "2021-04-12",
+      "end": "2021-05-17",
+      "status": "已安排，待执行"
+    },
+    {
+      "id": "3",
+      "shebei": "No.3发电机 缸套",
+      "gongdan": "xxx",
+      "start": "2021-04-07",
+      "end": "2021-05-05",
+      "status": "已安排，待执行"
+    },
+    {
+      "id": "4",
+      "shebei": "No.2发电机 机带滑油泵",
+      "gongdan": "xxx",
+      "start": "2021-04-10",
+      "end": "2021-05-10",
+      "status": "已安排，待执行"
+    },
+    {
+      "id": "5",
+      "shebei": "No.2发电机 缸套",
+      "gongdan": "xxx",
+      "start": "2021-04-10",
+      "end": "2021-05-10",
+      "status": "已安排，待执行"
+    },
+
+  ],
+           // url: "json/DGCar.json",
+            dataType: "json",
+            pagination: true, //分页
+            pageSize: number,
+            pageNumber: 1,
+            search: false, //显示搜索框
+            contentType: "application/x-www-form-urlencoded",
+            queryParams: null,
+            columns: [
+//                {
+//                    title: "车辆编号",
+//                    field: 'id',
+//                    width:80,
+//                    align: 'center',
+//                    valign: 'middle'
+//                },
+                {
+                    title: '序号',
+                    field: 'id',
+                    width:80,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '设备名称',
+                    field: 'shebei',
+                    width:180,
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: '工单编号',
+                    field: 'gongdan',
+                    width:180,
+                    align: 'center'
+                },
+
+                {
+                    title: '计划日期',
+                    field: 'start',
+                    width:100,
+                    align: 'center'
+                },
+                {
+                    title: '完成日期',
+                    field: 'end',
+                    width:100,
+                    align: 'center'
+                },
+                {
+                    title: '工单状态',
+                    field: 'status',
+                    width:150,
+                    align: 'center'
+                },
+
+            ]
+        });
+    }
+
+    function Echarts() {
+        var myChart = echarts.init($("#container_huan")[0]);
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['船长','甲板部','轮机部','后勤部','补充'],
+                textStyle:{
+                    color:"#e9ebee"
+                }
+            },
+            series: [
+                {
+                    name:'船上人员结构',
+                    type:'pie',
+                    center:['70%','50%'],
+                    radius: ['70%', '90%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data:[
+                        {value:1, name:'船长'},
+                        {value:9, name:'甲板部'},
+                        {value:6, name:'轮机部'},
+                        {value:2, name:'后勤部'},
+                        {value:2, name:'补充'}
+                    ]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
+    function Echarts1() {
+    var myChart = echarts.init($("#speed")[0]);
+            var option = {
+            title: {
+                     text: '当前航速',
+                     textStyle:{
+                         color:'#fff'
+                     }
+             },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/> {c} 节"
+            },
+            series: [
+                {
+                    name:'船速',
+                    type:'gauge',
+                    center : ['50%', '60%'],    // 默认全局居中
+                        radius : '100%',
+                        min:0,
+                        max:60,
+                        pointer: {
+                            width:2,
+                            shadowColor : '#fff', //默认透明
+                            shadowBlur: 4
+                        },
+                        detail : {
+                            show : true
+                        },
+                        data:[{value: 12}]
+                }
+            ]
+        };
+        myChart.setOption(option);
+        setInterval(function () {
+            option.series[0].data[0].value = (Math.random() * 30).toFixed(1) - 0;
+             myChart.setOption(option, true);
+        },2000);
+    }
+    
+
+
+
+    function TimeControl(){
+        $(".message_scroll_box").animate({marginTop:96},800,
+                function(){
+                    $(".message_scroll_box").css({marginTop:0});    //把顶部的边界清零
+                    $(".message_scroll_box .message_scroll:first").before($(".message_scroll_box .message_scroll:last"));    //在第一个新闻后面插入最后一个新闻
+
+                });
+    }
+    var T=setInterval(TimeControl,2300);    //开始定时
+    $(".message_scroll_box").mouseenter(function(){
+        clearInterval(T);    //停止定时
+    })
+            .mouseleave(function(){
+                T=setInterval(TimeControl,2500);    //再次定时
+            })
+
+</script>
+
+<!--轨迹回放时间日期选择-->
+<script>
+    !function(){
+        laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+        laydate({elem: '#demo'});
+        laydate({elem: '#demo1'});//绑定元素
+    }();
+    //日期范围限制
+    var start = {
+        elem: '#start',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(), //设定最小日期为当前日期
+        max: '2099-06-16', //最大日期
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            end.min = datas; //开始日选好后，重置结束日的最小日期
+            end.start = datas //将结束日的初始值设定为开始日
+        }
+    };
+
+    var end = {
+        elem: '#end',
+        format: 'YYYY-MM-DD',
+        min: laydate.now(),
+        max: '2099-06-16',
+        istime: true,
+        istoday: false,
+        choose: function(datas){
+            start.max = datas; //结束日选好后，充值开始日的最大日期
+        }
+    };
+    laydate(start);
+    laydate(end);
+    function edit() {
+        layer.open({
+            type: 2,
+            title: '存储详情',
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            area: ['700px', '400px'],
+            shadeClose: true,
+            closeBtn: 1,
+            content: 'saveFindTail.html'
+        });
+    }
+</script>
+<script>
+    // 百度地图API功能
+    var map = new BMap.Map("map");    // 创建Map实例
+    map.centerAndZoom(new BMap.Point(114.404, 20.915), 9);  // 初始化地图,设置中心点坐标和地图级别
+    //添加地图类型控件
+    map.addControl(new BMap.MapTypeControl({
+        mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));
+    var mapStyle={
+        style:"light"
+    };
+    map.setMapType(BMAP_HYBRID_MAP)
+    map.setMapStyle(mapStyle);
+    map.setCurrentCity("台湾");          // 设置地图显示的城市 此项是必须设置的
+    map.enableScrollWheelZoom(true);
+    // var myIcon = new BMap.Icon("img/pushmessage_localize_01.png", new BMap.Size(23, 25), {
+    //                 })
+    map.addOverlay(new BMap.Marker(new BMap.Point(114.41433,20.915),)) //{icon:myIcon}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

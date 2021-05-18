@@ -1,0 +1,442 @@
+html{
+    height: 100%;
+}
+*,ul,li,p,div,span{margin: 0;padding: 0}
+a{text-decoration: none}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+ul{list-style: none}
+body{
+    height: 100%;
+    width: 100%;
+    min-width: 1280px;
+    margin: 0;
+    background:  url(../img/bg01.png);background-repeat: no-repeat;background-position: center center;margin-top: -10px;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.content{
+    height: 100%;
+    padding: 5%;
+}
+@font-face {
+    font-family: "numfont";
+    src: url('../fonts/num.otf') format('truetype');
+}
+
+.index_nav{
+    position: fixed;
+    left:0;
+    right:0;
+    width: 100%;
+    height:40px;
+    line-height: 40px;
+}
+.index_nav ul li{font-size: 14px;color: #fff;opacity: 0.8;padding-top:8px;padding-left:10px;padding-right:10px;padding-bottom:5px;cursor: pointer;text-shadow:0 6px 8px #00225b }
+.index_nav ul .l_left{float:left;margin-left: 3%}
+.index_nav ul .r_right{float:right;margin-right: 3%}
+.index_nav ul li:hover{opacity: 1}
+.nav_active {
+border-bottom: 4px solid #4b8df8;
+/*box-shadow: -10px 0px 15px rgba(2,8,23,0.54) inset,*/
+/*0px -10px 15px rgba(2,8,23,0.54) inset,*/
+/*10px 0px 15px rgba(2,8,23,0.54) inset,*/
+/*0px 10px 15px rgba(2,8,23,0.54) inset;*/
+box-sizing: border-box;
+}
+
+.numfont {
+    font-family:"numfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.left{
+    float: left;
+    width:45%;
+    height: 90%;
+}
+/*closed*/
+#btn{
+    position: absolute;
+    top: 12%;
+    right: 12%;
+    width: 52px;
+    height: 52px;
+    z-index: 9999999;
+    cursor: pointer;
+}
+#btn>div{
+    width: 52px;
+    height: 52px;
+    position: relative;
+}
+
+.btn0{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    background: url("../img/close0.png") no-repeat;
+    background-size: 100%;
+    animation: clockwise 3s linear infinite;
+}
+.btn1{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    margin: 9px;
+    background: url("../img/close1.png") no-repeat;
+    background-size: 100%;
+}
+.btn2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 16px;
+    background: url("../img/close2.png") no-repeat;
+    background-size: 100%;
+    animation: anticlockwise 3s linear infinite;
+}
+@keyframes clockwise {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(-360deg);
+    }
+}
+@keyframes anticlockwise {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+/*air*/
+.air{
+    height: 20%;
+    border-radius: 10px;
+    border: 1px #0174f5 solid;
+}
+.title{
+    background-size: 90%;
+    height: 12%;
+    color: #ACA5A1;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 1%;
+    font-weight: bold;
+}
+.air-relative,.air-absolutely{
+    height: 20%;
+    position: relative;
+}
+.air-relative{
+    margin: 2% 0 8% 0;
+}
+.air-val{
+    float: left;
+    color: white;
+    height: 100%;
+    line-height: 100%;
+    width: 15%;
+    margin-top: -20px;
+}
+.air-val div{
+    width: 60%;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+    margin-top: 4%;
+}
+.air-val div p{
+    margin: 0 3%;
+}
+.unit{
+    width: 15%;
+    float: right;
+    margin-right: 5%;
+    color: white;
+    height: 100%;
+    font-family: numfont;
+    line-height: 200%;
+    text-align: right;
+}
+.gray{
+    border-bottom: 1px solid #25201E;
+}
+.gray,.light{
+    height: 100%;
+    width: 70%;
+    position: absolute;
+    left: 15%;
+}
+.gray span,.light span{
+    display: block;
+    width: 2%;
+    height: 90%;
+    float: left;
+}
+.air-relative .gray span{
+    background: url("../img/bartop1.png") no-repeat;
+    background-size: auto 100%;
+}
+.air-relative .light span{
+    background: url("../img/bartop0.png") no-repeat;
+    background-size: auto 100%;
+}
+.air-absolutely .gray span{
+    background: url("../img/barfoot1.png") no-repeat;
+    background-size: auto 100%;
+}
+.air-absolutely .light span{
+    background: url("../img/barfoot0.png") no-repeat;
+    background-size: auto 100%;
+}
+.hpa-rel,.hpa-abs{
+    font-size: 30px;
+}
+.air-val .hpa-nam{
+    margin-top: 20%;
+}
+.hpa-nam{
+    font-size: 10px;
+}
+
+/*tem-hum*/
+.tem-hum{
+    height: 25%;
+    margin-top: 2%;
+}
+.temperature,.humidity{
+    float: left;
+    width: 48%;
+    height: 100%;
+    margin: 2px;
+    border-radius: 10px;
+    border: 1px #0174f5 solid;
+    box-sizing: border-box;
+}
+.humidity{
+    float: right;
+}
+.tem-hum-title{
+    background: #B0CC35;
+    width: 60%;
+    margin-left: 25%;
+    height: 10%;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 160%;
+}
+.tem-hum-chart{
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+.tem-val,.hum-val{
+    width: 70%;
+    margin-left: 30%;
+    height: 10%;
+    font-size: 11px;
+    font-weight: bold;
+}
+.indoor,.outdoor{
+    display: inline-block;
+    color: white;
+    text-indent: 8px;
+    margin-left: 8px;
+}
+.indoor{
+    border-left: 4px solid #B0CC35;
+}
+.outdoor{
+    border-left: 4px solid red;
+}
+/*temp-k*/
+.temp-k{
+    height: 21%;
+    margin-top: 3%;
+    border-radius: 10px;border: 1px #0174f5 solid;
+}
+#tempKChart{
+    height: 87%;
+}
+.dity-k{
+    height: 21%;
+    margin-top: 3%;
+    border-radius: 10px;border: 1px #0174f5 solid;
+}
+#dityKChart{
+    height: 87%;
+}
+
+/*right*/
+.right{
+    float: left;
+    width: 40%;
+    height: 88%;
+    margin-left:5%;
+    border-radius: 10px;
+    border: 2px #0174f5 solid;
+    box-sizing: border-box;
+}
+.information{
+    width: 90%;
+    height: 20%;
+    padding:  3%;
+    box-sizing: border-box;
+   
+}
+.baseInfo,.temData{
+    width: 40%;
+    height: 100%;
+    float: left;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.infoTitle{
+    font-size: 10px;
+    color: #AEA7A3;
+    margin-top: 0;
+}
+.area{
+    font-family: numfont;
+    font-size: 30px;
+    color: #B0CC35;
+    margin: 0 0 12px 0;
+}
+.days{
+    font-family: numfont;
+    color: #B0CC35;
+    font-size: 25px;
+}
+.date{
+    display: inline-block;
+    text-indent: 29px;
+}
+.idNum{
+    display: inline-block;
+    text-indent: 50px;
+}
+.temTitle{
+    color: red;
+    font-size: 18px;
+    margin: 0;
+}
+.indoorTem{
+    font-family: numfont;
+    color: red;
+    font-size: 30px;
+    margin: 0 0 15px 0;
+}
+.temperatureN{
+    font-size: 60px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.point span{
+    display: inline-block;
+    
+    margin-right: 80px;
+}
+.wind{
+    width: 100%;
+    height: 30%;
+    margin-top: 3%;
+}
+#windChart{
+    width: 45%;
+    margin-left: 5%;
+    float: left;
+    height: 100%;
+}
+.windData{
+    width: 45%;
+    float: left;
+    height: 100%;
+}
+.windSpeed,.gust{
+    width: 94%;
+    height: 50%;
+    float: right;
+    overflow: hidden;
+}
+.windTitle{
+    background: #B0CC35;
+    width: 60%;
+    margin-top: 5%;
+    margin-left: 35%;
+    height: 14%;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 160%;
+}
+.windBox{
+    width: 100%;
+    height: 80%;
+    color: #ACA5A1;
+}
+.windBox>div{
+    margin-top: 2%;
+    height: 98%;
+    float: left;
+}
+.windBox div p{
+    font-size: 12px;
+    margin: 5px 0;
+}
+.windWrap{
+    width: 76%;
+    height: 80%;
+    margin: 20% 12%;
+
+    overflow: hidden;
+}
+.windFan{
+    width: 60%;
+    margin: 20%;
+}
+.currentSpeed,.highestSpeed{
+    font-family: numfont;
+    color: #B0CC35;
+    font-size: 30px;
+}
+
+.windSpeed .windFan{
+    animation: speed 600ms linear infinite;
+}
+.gust .windFan{
+    animation: speed 400ms linear infinite;
+}
+@keyframes speed {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+/*rain*/
+.air-title{
+    height: 5%;
+}
+.rainfall{
+    width: 100%;
+    height: 33%;
+    margin-top: 5%;
+}
+.rainfall .windData{
+    margin-left: 2.5%;
+}
